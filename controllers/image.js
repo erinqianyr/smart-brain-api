@@ -5,6 +5,7 @@ const app = new Clarifai.App({
 });
 
 const handleApiCall = (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   console.log("aaaaaaaaaaa");
   console.log(req.body);
   app.models
