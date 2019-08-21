@@ -7,8 +7,6 @@ const app = new Clarifai.App({
 const handleApiCall = (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', '*');
-  console.log("aaaaaaaaaaa");
-  console.log(req.body);
   app.models
     .predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
     .then(data => {
