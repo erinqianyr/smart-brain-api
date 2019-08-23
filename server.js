@@ -20,6 +20,7 @@ const db = knex({
 const app = express();
 
 app.use(cors());
+app.options('*', cors());
 app.use(bodyParser.json());
 
 app.use(function(req, res, next) {
